@@ -6,7 +6,7 @@
         <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px] mt-3">
             <li th:each="product, loop : ${productList}" class="flex flex-col">
                 <a th:href="@{/product/detail/{id}(id=${product.id})}" data-before="VIEW MORE">
-                    <img class="block w-full" src="https://image.xportsnews.com/contents/images/upload/article/2020/0518/mb_1589786248977810.jpg" alt="">
+                    <img class="block w-full" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/197854122_2891263721146701_8099844815382470175_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=53a332&_nc_ohc=LZGcmxyRVuUQ7kNvgHbuqaR&_nc_ht=scontent-ssn1-1.xx&oh=00_AYBRUF2V9fYqp3wxueZQeHtgIlvjmuztRHyvOxBd2yaR5Q&oe=66B323BB" alt="">
                 </a>
                 <a href="#" th:text="${product.name}" class="text-center mt-2"></a>
                 <a href="#" th:text="${product.price}+원" class="text-center mt-2"></a>
