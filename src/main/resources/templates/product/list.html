@@ -5,8 +5,8 @@
         <h1 class="text-[1.5rem] font-bold">강의 리스트</h1>
         <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px] mt-3">
             <li th:each="product, loop : ${productList}" class="flex flex-col">
-                <a th:href="@{|detail/${product.id}|}" data-before="VIEW MORE">
-                    <img class="block w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCWc6lZhTcDeR0AG3wKQTVF81k70GEj-Z1Uw&s" alt="">
+                <a th:href="@{|/product/detail/${product.id}|}" data-before="VIEW MORE">
+                    <img class="block w-full" src="https://blog.kakaocdn.net/dn/3ghE9/btq2RjJq0zF/skhqeIUWQca9a8VDiPW1Sk/img.png" alt="">
                 </a>
                 <a th:href="@{|/product/detail/${product.id}|}" th:text="${product.name}" class="text-center mt-2"></a>
                 <a th:href="@{|/product/detail/${product.id}|}" th:text="${product.price}+원" class="text-center mt-2"></a>
