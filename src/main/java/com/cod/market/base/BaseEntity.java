@@ -19,10 +19,10 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class BaseEntity {
-
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private long id;
+
     @CreatedDate
     private LocalDateTime createDate;
     @LastModifiedDate
