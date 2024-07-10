@@ -26,6 +26,7 @@ public class ProductController {
     public String detail(@PathVariable("id") Long id, Model model) {
         Product product = productService.getProduct(id);
         model.addAttribute("product", product);
+        System.out.println(product.toString());
         return "product/detail";
     }
 }
