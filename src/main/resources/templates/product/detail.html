@@ -8,11 +8,11 @@
 
         <ul class="list-group list-group-flush gap-2">
             <li class="list-group-item">
-                <img class="w-full max-w-[300px]" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/197854122_2891263721146701_8099844815382470175_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=53a332&_nc_ohc=LZGcmxyRVuUQ7kNvgHbuqaR&_nc_ht=scontent-ssn1-1.xx&oh=00_AYBRUF2V9fYqp3wxueZQeHtgIlvjmuztRHyvOxBd2yaR5Q&oe=66B323BB" alt="상품이미지">
+                <img class="w-full max-w-[300px]" src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F27508A42555D716403" alt="상품이미지">
             </li>
             <li class="list-group-item">
                 <span>번호 : </span>
-                <span class="badge bg-primary">123</span>
+                <span class="badge bg-primary" th:text="${product.id}"></span>
             </li>
             <li class="list-group-item">
                 <span>등록날짜 : </span>
@@ -28,7 +28,7 @@
             </li>
             <li class="list-group-item">
                 <span>가격 : </span>
-                <span th:text="${product.name}"></span>원
+                <span th:text="${product.price}"></span>원
             </li>
             <li class="list-group-item">
                 <span>마켓 : </span>
