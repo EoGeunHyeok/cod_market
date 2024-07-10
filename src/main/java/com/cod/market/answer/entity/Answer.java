@@ -5,8 +5,12 @@ import com.cod.market.member.entity.Member;
 import com.cod.market.question.entity.Question;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Answer extends BaseEntity {
     private String comment;
 
