@@ -14,27 +14,12 @@ import java.time.LocalDateTime;
 public class QuestionService {
     private final QuestionRepository questionRepository;
 
-
     public void create(Product product, Member member, String content) {
-
-        Question question = Question.builder()
-                .product(product)
-                .member(member)
-                .content(content)
-                .createDate(LocalDateTime.now())
-                .build();
-
-
-        questionRepository.save(question);
+        Question q = new Question();
+        q.setProduct(product);
+        q.setMember(member);
+        q.setContent(content);
+        q.setCreateDate(LocalDateTime.now());
+        questionRepository.save(q);
     }
-
-
-//    public void create(Product product, Member member, String content) {
-//        Question q = new Question();
-//        q.setProduct(product);
-//        q.setMember(member);
-//        q.setContent(content);
-//        q.setCreateDate(LocalDateTime.now());
-//        questionRepository.save(q);
-//    }
 }
