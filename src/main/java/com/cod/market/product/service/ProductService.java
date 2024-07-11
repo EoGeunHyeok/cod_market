@@ -18,12 +18,12 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ProductService {
     private final ProductRepository productRepository;
-    public Page<Product> getList(int page) {
+    public Page<Product> getList (String kw,int page) {
         List<Sort.Order> sorts = new ArrayList<>();
         sorts.add(Sort.Order.desc("createDate"));
         Pageable pageable = PageRequest.of(page, 8, Sort.by(sorts));
 
-        return productRepository.findAll(pageable);
+        return productRepository.findAllByKeyword(kw, pageable);
     }
 
     public void create(String name, int price) {
