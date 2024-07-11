@@ -22,7 +22,6 @@ public class QuestionController {
     private final MemberService memberService;
 
 
-
     @PostMapping("/create/{id}")
     public String create(
             @PathVariable("id") Long id,
@@ -59,5 +58,13 @@ public class QuestionController {
         return String.format("redirect:/product/detail/%s", productId);
     }
 
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable("id") Long id) {
+        Question question = questionService.getQuestion(id);
+        questionService.delete(question);
+        long productId = question.getProduct().getId();
 
+        return String.format("redirect:/product/detail/%s", productId);
+
+    }
 }
