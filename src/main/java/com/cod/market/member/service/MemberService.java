@@ -16,13 +16,12 @@ public class MemberService {
     private final PasswordEncoder passwordEncoder;
 
     public Member signup(String username, String password, String email, String nickname) {
-        Member member = new Member();
-        member.setUsername(username);
-        member.setPassword(passwordEncoder.encode(password));
-        member.setEmail(email);
-        member.setNickname(nickname);
-        member.setCreateDate(LocalDateTime.now());
-
+        Member member = Member.builder()
+                .username(username)
+                .password(password)
+                .email(email)
+                .nickname(nickname)
+                .build();
         memberRepository.save(member);
 
         return member;

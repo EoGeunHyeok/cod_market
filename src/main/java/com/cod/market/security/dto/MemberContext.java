@@ -1,6 +1,5 @@
 package com.cod.market.security.dto;
 
-
 import com.cod.market.member.entity.Member;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
