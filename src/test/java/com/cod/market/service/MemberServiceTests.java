@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class MemberServiceTests {
     @Autowired
-    private MemberService memberServcie;
+    private MemberService memberService;
 
     @Test
     @DisplayName("회원가입")
@@ -19,7 +19,7 @@ public class MemberServiceTests {
     String email = "user1@test.com";
     String nickname = "user1";
 
-    memberServcie.signup(username, password, email, nickname);
+    memberService.signup(username, password, email, nickname);
 
     }
 }
