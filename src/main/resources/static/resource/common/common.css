@@ -20,3 +20,8 @@ html > body {
 .collapse {
     visibility: visible !important;
     }
+    .page-link:hover {
+        background-color: transparent;
+        border: none;
+        text-decoration: underline;
+    }
