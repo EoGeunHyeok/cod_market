@@ -1,7 +1,7 @@
 package com.cod.market.member.service;
 
 import com.cod.market.member.entity.Member;
-import com.cod.market.member.repositoy.MemberRepository;
+import com.cod.market.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
