@@ -21,6 +21,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product extends BaseEntity {
+    
+    private String thumbnailImg;
     private String name;
     private String description; // 내용?
 

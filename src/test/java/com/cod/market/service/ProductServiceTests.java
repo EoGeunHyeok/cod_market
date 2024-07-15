@@ -17,7 +17,7 @@ public class ProductServiceTests {
         for ( int i = 1; i <= 200; i++) {
             String name = String.format("짱곰이의 플러팅 기술 :[%03d]장", i);
             int price = 100;
-            String description = String.format("짱곰이만 따라하세요! :[%03d]장 , 누구나 할 수 있따!", i);
+            String description = String.format("짱곰이만 따라하세요! :[%03d] 번째 이야기 , 누구나 할 수 있따!", i);
             productService.create(name, description, price);
         }
     }
