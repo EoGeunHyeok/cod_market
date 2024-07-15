@@ -9,11 +9,11 @@
 
             <ul class="list-group list-group-flush gap-2">
                 <li class="list-group-item">
-                    <img class="w-full max-w-[300px]" th:src="@{|/gen/${product.thumbnailImg}|}"  alt="상품이미지">
+                    <img class="w-full max-w-[300px]" th:src="@{|/gen/${product.thumbnailImg}|}" alt="상품이미지">
                 </li>
                 <li class="list-group-item">
                     <span>번호 : </span>
-                    <span class="badge bg-primary" th:text="${product.id}"></span>
+                    <span th:text="${product.id}"></span>
                 </li>
                 <li class="list-group-item">
                     <span>등록날짜 : </span>
@@ -28,7 +28,7 @@
                     <span class="font-bold" th:text="${product.name}"></span>
                 </li>
                 <li class="list-group-item">
-                    <span>내용 : </span>
+                    <span>상품설명 : </span>
                     <span th:text="${product.description}"></span>
                 </li>
                 <li class="list-group-item">
@@ -64,10 +64,9 @@
                     <div class="mt-3">
                         <div class="mb-3">
                             <label for="content" class="form-label">내용</label>
-                            <textarea  name="content" id="content" class="form-control" row="7">
-                            </textarea>
+                            <textarea name="content" id="content" class="form-control" row="7"></textarea>
                         </div>
-                        <input type="submit" value="등록하기" class="btn btn-primary">
+                        <input type="submit" value="등록하기" class="btn btn-dark">
                     </div>
                 </form>
                 <div sec:authorize="isAnonymous()">
@@ -122,7 +121,6 @@
                     }
                 });
             </script>
-
         </div>
     </div>
 
