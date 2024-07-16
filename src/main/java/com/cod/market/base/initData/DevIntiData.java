@@ -15,11 +15,19 @@ public class DevIntiData implements BeforeIntiData {
         return args -> {
             beforeInit();
 
+            // member init
             String password = "1234"; // noop을 해주면 난수처럼 들어감
             memberService.signup("user1",password,"user1@test.com","user1");
             memberService.signup("user2",password,"user2@test.com","user2");
             memberService.signup("cake",password,"cake@test.com","예지");
             memberService.signup("admin",password,"admin@test.com","admin");
+
+            // product init
+            productService.create("짱곰이의 플러팅 기술 1장","보고 따라만해도 100% 성공 보장!", 10000);
+            productService.create("짱곰이의 플러팅 기술 2장","보고 따라만해도 100% 성공 보장!", 10000);
+            productService.create("짱곰이의 플러팅 기술 3장","보고 따라만해도 100% 성공 보장!", 10000);
+            productService.create("짱곰이의 플러팅 기술 4장","보고 따라만해도 100% 성공 보장!", 10000);
+
         };
     }
 }

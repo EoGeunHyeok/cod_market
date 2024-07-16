@@ -23,7 +23,7 @@ import java.util.List;
 public class Product extends BaseEntity {
     
     private String thumbnailImg;
-    private String name;
+    private String title;
     private String description; // 내용?
 
     private int price;
