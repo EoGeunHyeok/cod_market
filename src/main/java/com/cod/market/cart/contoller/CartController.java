@@ -1,6 +1,7 @@
 package com.cod.market.cart.contoller;
 
-import com.cod.market.cart.entity.Cart;
+
+import com.cod.market.cart.entity.CartItem;
 import com.cod.market.cart.service.CartService;
 import com.cod.market.member.entity.Member;
 import com.cod.market.member.service.MemberService;
@@ -27,7 +28,7 @@ public class CartController {
     @GetMapping("/list")
     public String list(Principal principal, Model model) {
         Member member = memberService.findByUserName(principal.getName());
-        List<Cart> cartList = cartService.getList(member);
+        List<CartItem> cartList = cartService.getList(member);
 
         model.addAttribute("cartList", cartList);
 
