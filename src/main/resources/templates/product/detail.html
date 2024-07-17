@@ -131,7 +131,8 @@
         let amount = /*[[ ${product.price}]]*/;
         let orderName = /*[[ ${product.title}]]*/;
         let tossPayments = TossPayments("test_ck_EP59LybZ8BJmMM1mLyYG86GYo7pR");
-        let path = "/";
+
+        let path = "/order/";
         let successUrl = window.location.origin + path + "success";
         let failUrl = window.location.origin + path + "fail";
         let callbackUrl = window.location.origin + path + "va_callback";
