@@ -1,5 +1,6 @@
 package com.cod.market.oder.controller;
 
+import com.cod.market.oder.service.OrderService;
 import com.cod.market.product.entity.Product;
 import com.cod.market.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +27,7 @@ public class OrderController {
     @Value("${custom.paymentSecretKey}")
     private String paymentSecretKey;
     private final ProductService productService;
+    private final OrderService orderService;
     @GetMapping("/detail")
     public String detail(Model model, @RequestParam("productId") Long productId) {
         Product product = productService.getProduct(productId);
@@ -91,6 +93,9 @@ public class OrderController {
             model.addAttribute("code", (String) jsonObject.get("code"));
             model.addAttribute("message", (String) jsonObject.get("message"));
         }
+
+       // orderService.save();
+
 
         return "order/success";
     }
