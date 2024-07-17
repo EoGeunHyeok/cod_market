@@ -33,3 +33,5 @@ spring:
   output:
     ansi:
       enabled: always
+custom:
+  paymentSecretKey: 'paymentSecretKey'
